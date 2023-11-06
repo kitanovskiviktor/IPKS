@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadaca 2</title>
+    <script>        
+    
+    function phone() {
+        let number = prompt("Vnesete mobilen telefon");
+        let operator = ``;
+        let prvDel = number.substring(0, 2);
+        let sredina = number.substring(2,5);
+        let nakraj = number.substring(5,8);
+
+        if(prvDel === "70" || 
+        prvDel === "71" ||
+        prvDel === "72") {
+            operator = "T-Mobile";
+        }
+        else if(prvDel === "75" || 
+        prvDel === "76") {
+            operator = "One";
+        }
+        else {
+            operator = "Vip";
+        }
+        console.log(`0` + prvDel + `/` + sredina + `-` + nakraj + ` - ` + operator);
+    }
+    phone();
+
+    </script>
+</head>
+<body>
+    <h1>aaa</h1>
+</body>
+</html>

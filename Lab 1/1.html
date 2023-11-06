@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadaca 1</title>
+    <script>        
+        function check(){
+            let broj = window.prompt("Vnesi broj");
+            if(broj.length !== 4) {
+                alert('Ne mozhe da se proveri vneseniot broj');
+                return null;
+            }
+            let string = ``;
+            let sporedi = broj.toString().split('').reverse().join('');
+            if(sporedi === broj) {
+                string = `Palindrom e`;
+            }
+            else {
+                string = `Ne e palindrom`;
+            }
+            let toString = broj.toString();
+            let zbir = toString.split('').reduce((accumulator, currentValue) => parseInt(accumulator) + parseInt(currentValue), 0);
+            if(broj % zbir === 0) {
+                string = string + ` deliv e`;
+            }
+            else {
+                string = string + ` ne e deliv`;
+            }
+            alert(string);
+        }
+
+        check();
+
+        </script>
+</head>
+<body>
+</body>
+</html>

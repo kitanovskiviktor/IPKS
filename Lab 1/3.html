@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadaca 3</title>
+    <script>        
+    
+    function funkcija() {
+
+        let prvString = prompt("Vnesete go prviot string");
+        let vtorString = prompt("Vnesete go vtoriot string");
+        let tretString = prompt("Vnesete go tretiot string");
+
+        let zborString1 = prvString.split(' ');
+        let zborString2 = vtorString.split(' ');
+        let zborString3 = tretString.split(' ');
+
+        let najdolgZbor = ``;
+
+        for(const nizaZborovi of [zborString1, zborString2, zborString3]) {
+            for (const zbor of nizaZborovi) {
+                    if (zbor.length > najdolgZbor.length) {
+                        najdolgZbor = zbor;
+                    }
+                }
+        }
+        alert(najdolgZbor);
+    }
+
+    funkcija();
+
+    </script>
+</head>
+<body>
+</body>
+</html>
