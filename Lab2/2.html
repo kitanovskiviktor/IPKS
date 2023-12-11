@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadaca 2 - 225130</title>
+
+    <style>
+        div {
+            display: flex;
+            flex-direction: column;
+        }
+        button {
+            display: inline-block;
+            width: 200px;
+            height: 40px;
+            background-color: aquamarine;
+            box-shadow: 2px 2px #211808;
+            border: 1px solid #211808;
+            cursor: pointer;
+            margin-bottom: 40px;
+        }
+    </style>
+
+</head>
+<body>
+
+
+    <div>
+        <button onclick="generateImage()">Generate Random Image</button>
+        <img id="randomImage" src="" alt=""/>
+    </div>
+
+
+    <script>
+
+        const listImages = ["https://designmodo.com/wp-content/uploads/2014/07/free-photos.jpg",
+        "https://farm5.staticflickr.com/4060/4567292488_5d3f4b05f6_z.jpg",
+        "https://wallup.net/wp-content/uploads/2017/03/28/401266-landscape-road-forest-748x421.jpg"
+    ]
+
+        function generateImage() {
+            const randomIndex = Math.floor(Math.random() * listImages.length);
+            console.log(randomIndex);
+            document.getElementById("randomImage").src = listImages[randomIndex];
+            document.getElementById("randomImage").style.width = "600px";
+            document.getElementById("randomImage").style.height = "400px";
+        }
+    </script>
+    
+</body>
+</html>

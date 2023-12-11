@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadaca 4 - 225130</title>
+
+    <style>
+
+        input {
+            margin-bottom: 12px;
+        }
+
+        span {
+            font-style: italic;
+        }
+
+        button {
+            margin-bottom: 12px;
+        }
+    </style>
+</head>
+<body>
+
+    <div>
+        <input id="number-1"/>
+        <input id="number-2"/>
+        <span>i</span>
+    </div>
+
+    <div>
+        <input id="number-3"/>
+        <input id="number-4"/>
+        <span>i</span>
+    </div>
+
+    <button onclick="add()">Add</button>
+
+    <div>
+        <input id="result-1"/>
+        <input id="result-2"/>
+        <span>i</span>
+    </div>
+    <script>
+        function add() {
+            let number1 = document.getElementById("number-1").value;
+            let number2 = document.getElementById("number-2").value;
+            let number3 = document.getElementById("number-3").value;
+            let number4 = document.getElementById("number-4").value;
+
+            let result1 = document.getElementById("result-1");
+            let result2 = document.getElementById("result-2");
+
+            result1.value = parseInt(number1) + parseInt(number3);
+            result2.value = parseInt(number2) + parseInt(number4);
+
+        }
+    </script>
+</body>
+</html>
