@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadaca 4</title>
+</head>
+<body>
+
+    <script>
+
+        let bookList = [
+            {
+                id: 1,
+                title: "The Stranger",
+                author: "Albert Camus",
+                alreadyRead: false,
+            },
+            {
+                id: 2,
+                title: "The Metamorphosis",
+                author: "Frankz Kafka",
+                alreadyRead: true,
+            },
+            {
+                id: 3,
+                title: "War & Peace",
+                author: "Leo Tolstoy",
+                alreadyRead: false,
+            },
+            {
+                id: 4,
+                title: "The Castle",
+                author: "Frankz Kafka",
+                alreadyRead: true,
+            },
+            {
+                id: 5,
+                title: "The Brothers Karamazov",
+                author: "Fyodor Dostoevsky",
+                alreadyRead: false,
+            },
+        ]
+
+        function books() {
+            bookList.map((item) => {
+                if(item.alreadyRead) {
+                    console.log("You already read " + item.title + " by " + item.author);
+                }
+                else {
+                    console.log("You still need to read " + item.title + " by " + item.author);
+                }
+            })
+        }
+
+        books();
+
+
+    </script>
+    
+</body>
+</html>

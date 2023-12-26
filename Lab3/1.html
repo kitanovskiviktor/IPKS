@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadaca 1</title>
+</head>
+<body>
+
+
+    <script>
+
+        function removeDuplicate() {
+            let array = [1,2,3,4,4,1,5,1,3,32,7,33,32,99,6,7,11];
+            console.log(array);
+            let editedArray = array.filter((value, index, item) => {
+                return item.indexOf(value) === index;
+            })
+            console.log(editedArray);
+        }
+        removeDuplicate();
+
+
+    </script>
+    
+</body>
+</html>
