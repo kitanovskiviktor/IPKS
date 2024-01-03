@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadaca 3</title>
+    <style>
+        #container {
+            margin: auto;
+            width: 400px;
+            text-align: center;
+            padding: 20px 40px;
+        }
+
+        label {
+            display: block;
+            margin-top: 12px;
+            margin-bottom: 12px;
+        }
+
+        button {
+            display: block;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="container">
+        <h2>Промена на позадина</h2>
+
+        <div>
+            <input type="radio" name="type" value="color"/>Color
+            <input type="radio" name="type" value="image"/>Image
+            <label>Value: <input type="text" id="value"/></label>
+            <button onclick="change()">Промени</button>
+        </div>
+    </div>
+
+
+    <script>
+
+        function change() {
+            let type = document.querySelector('input[name="type"]:checked');
+            let value = document.getElementById("value").value;
+            let container = document.getElementById("container");
+
+            if(type === null) {
+                alert("Изберете тип!");
+                return;
+            }
+
+            if(type.value === "color") {
+                container.style.background = value;
+            }
+            else {
+                container.style.backgroundImage = `url(${value})`;
+            }
+        }
+    </script>
+</body>
+</html>

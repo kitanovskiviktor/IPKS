@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadaca 1</title>
+
+    <style>
+        label {
+            display: block;
+            margin-bottom: 12px;
+        }
+
+        input, select {
+            padding: 4px 12px;
+        }
+
+        table {
+            border-collapse: collapse;
+            margin-top: 24px;
+        }
+
+        table, tr, th, td {
+            border: 1px solid black;
+            padding: 4px 8px;
+        }
+    </style>
+
+</head>
+<body>
+
+    <h2>Форма за внесување оцени</h2>
+
+    <div>
+        <label>Име: <input id="name"/></label>
+        <label>Презиме: <input id="surname"/></label>
+        <label>Индекс: <input id="index"/></label>
+        <label>Предмет: <input id="subject"/></label>
+        <label>Оцена: 
+            <select id="grade">
+                <option>5 (пет)</option>
+                <option>6 (шест)</option>
+                <option>7 (седум)</option>
+                <option>8 (осум)</option>
+                <option>9 (девет)</option>
+                <option>10 (десет)</option>
+            </select>
+        </label>
+        <button onclick="add()">Внеси</button>
+    </div>
+
+    <table id="table">
+        <tr>
+            <th>Име</th>
+            <th>Презиме</th>
+            <th>Индекс</th>
+            <th>Предмет</th>
+            <th>Оцена</th>
+        </tr>
+    </table>
+
+    <script>
+
+        let data = [];
+
+        function add() {
+            let nameValue = document.getElementById("name").value;
+            let surnameValue = document.getElementById("surname").value;
+            let indexValue = document.getElementById("index").value;
+            let subjectValue = document.getElementById("subject").value;
+            let gradeValue = document.getElementById("grade").value;
+
+            if(!(nameValue && surnameValue && indexValue && subjectValue)) {
+                alert("Потполнете ги сите полиња!");
+                return;
+            }
+
+            let newData = {
+                name: nameValue,
+                surname: surnameValue,
+                index: indexValue,
+                subject: subjectValue,
+                grade: gradeValue
+            }
+
+            let table = document.getElementById('table');  
+            
+            table.innerHTML += `
+                    <tr>
+                        <td>${newData.name}</td>
+                        <td>${newData.surname}</td>
+                        <td>${newData.index}</td>
+                        <td>${newData.subject}</td>
+                        <td>${newData.grade}</td>
+                    </tr>
+                `
+            data = [...data, newData];
+
+            document.getElementById("name").value = "";
+            document.getElementById("surname").value = "";
+            document.getElementById("index").value = "";
+            document.getElementById("subject").value = "";
+            document.getElementById("grade").value = "5 (пет)";
+        }
+    </script>
+</body>
+</html>

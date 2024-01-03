@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadaca 2</title>
+
+    <style>
+        label {
+            display: block;
+            margin-bottom: 12px;
+        }
+
+        #container {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div>
+        <label>Items: <input id="items"/></label>
+        <label>Type: 
+            <select id="type">
+                <option value="radio">Radio Button</option>
+                <option value="checkbox">Check Box</option>
+            </select>
+        </label>
+
+        <button onclick="show()">Прикажи</button>
+    </div>
+
+    <div id="container">
+
+    </div>
+    
+
+    <script>
+
+        function show() {
+            let items = document.getElementById("items").value;
+            let type = document.getElementById("type").value;
+
+            if(!items) {
+                alert("Потполнете ги сите полиња!");
+                return;
+            }
+
+            let splitItems = items.split(',');
+            
+            let container = document.getElementById("container");
+            container.innerHTML = "";
+
+            for(let item of splitItems) {
+                container.innerHTML += `
+                    <input type="${type}"/> ${item}
+                `    
+            }
+        }
+    </script>
+</body>
+</html>
