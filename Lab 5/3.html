@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadaca 3</title>
+
+    <style>
+        #congrats-text {
+            display: none;
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>Meморија</h1>
+    <p id="congrats-text">Congratulations! You gussed them all!</p>
+    <div style="text-align:left; float:left">
+        <table border="1">
+            <tr>
+                <td id="11"><img src="" /></td>
+                <td id="12"><img src="" /></td>
+                <td id="13"><img src="" /></td>
+                <td id="14"><img src="" /></td>
+            </tr>
+            <tr>
+                <td id="21"><img src="" /></td>
+                <td id="22"><img src="" /></td>
+                <td id="23"><img src="" /></td>
+                <td id="24"><img src="" /></td>
+            </tr>
+            <tr>
+                <td id="31"><img src="" /></td>
+                <td id="32"><img src="" /></td>
+                <td id="33"><img src="" /></td>
+                <td id="34"><img src="" /></td>
+            </tr>
+            <tr>
+                <td id="41"><img src="" /></td>
+                <td id="42"><img src="" /></td>
+                <td id="43"><img src="" /></td>
+                <td id="44"><img src="" /></td>
+            </tr>
+        </table>
+        <input type="submit" value="RESET" onclick="reset()"/>
+    </div>
+    <br />
+
+    <script>
+
+        let backgroundImage = "images/ZAVESA.webp";
+
+        let imagesData = [
+            "images/BANDAZ.webp",
+            "images/BOJA.webp",
+            "images/DETERGENT.webp",
+            "images/DONAT.webp",
+            "images/KLAVIR.webp",
+            "images/LEGO_GLAVA.webp",
+            "images/MAUS.webp",
+            "images/ZELENA_PLANETA.webp",
+            "images/BANDAZ.webp",
+            "images/BOJA.webp",
+            "images/DETERGENT.webp",
+            "images/DONAT.webp",
+            "images/KLAVIR.webp",
+            "images/LEGO_GLAVA.webp",
+            "images/MAUS.webp",
+            "images/ZELENA_PLANETA.webp",
+        ]
+
+
+        window.onload = () => { reset(); }
+
+        let openedImages = [];
+        let guessedCounter = 0;
+
+        function openImage(e) {
+            
+            e.target.src = e.target.getAttribute("mainImage");
+
+            if(openedImages.includes(e.target)) {
+                return;
+            }
+
+            if(guessedCounter === 8) {
+                return;
+            }
+
+            openedImages.push(e.target);
+
+            if(openedImages.length === 2 && openedImages[0].getAttribute("mainImage") === openedImages[1].getAttribute("mainImage")) {
+                e.target.src = e.target.getAttribute("mainImage");
+                openedImages = [];
+                guessedCounter++;
+                if(guessedCounter === 8) {
+                    document.getElementById("congrats-text").style.display = "block";
+                }
+                return;
+            }
+
+            if(openedImages.length === 3 && openedImages[0].getAttribute("mainImage") !== openedImages[1].getAttribute("mainImage")) {
+                openedImages[0].src = backgroundImage;
+                openedImages[1].src = backgroundImage;
+                openedImages = [];
+                openedImages.push(e.target);
+            }
+        }
+
+        function shuffleArray(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+            return array;
+        }
+
+        function reset() {
+
+            let allImages = document.getElementsByTagName("img");
+            imagesData = shuffleArray(imagesData);
+
+            for (let i = 0; i < allImages.length; i++) {
+                allImages[i].src = backgroundImage;
+                allImages[i].setAttribute("mainImage", imagesData[i]);
+                allImages[i].addEventListener("click", openImage);
+            }
+            openedImages = [];
+            guessedCounter = 0;
+            document.getElementById("congrats-text").style.display = "none";
+        }
+
+    </script>
+</body>
+
+</html>
