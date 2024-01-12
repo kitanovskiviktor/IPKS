@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zadaca 2</title>
+  </head>
+  <body>
+    <div>
+      <div style="text-align: right; float: left">
+        <label id="obid">Обиди <span id="guessNumber">0</span></label>
+        <p>Погодок: <input id="guess" style="width: 150px" /></p>
+        <button onclick="checkNumber()" id="pogodokButton">Погоди</button>
+        <button onclick="reset()">Од почеток</button>
+      </div>
+    </div>
+    <br />
+    <div id="prikaz" style="clear: both"></div>
+
+
+    <script>
+
+
+        let randomNumber = 0;
+        let obidi = 0;
+
+        function generateNumber() {
+            randomNumber = Math.floor(Math.random() * (9999 - 1000 + 1)) + 1000;
+        }
+
+        generateNumber();
+
+        function checkNumber() {
+            
+            let inputNumber = document.getElementById("guess").value;
+            let rightPlaceNumbersCounter = 0;
+            let rightNumbersCounter = 0;
+
+            let splitInputNumber = inputNumber.toString().split("");
+            let splitRandomNumber = randomNumber.toString().split("");
+
+            if(splitInputNumber.length !== 4) {
+                alert("Внесете само четирицифрен број");
+                return;
+            }
+            
+            for(let i = 0; i<4; i++) {
+                if(splitInputNumber[i] === splitRandomNumber[i]) {
+                    rightPlaceNumbersCounter++;
+                }
+                for(let j = 0; j<4; j++) {
+                    if (splitInputNumber[i] === splitRandomNumber[j]) {
+                        rightNumbersCounter++;
+                    }
+                }
+            }
+
+
+            let guessNumber = document.getElementById("guessNumber").innerHTML;
+
+            if(rightPlaceNumbersCounter < 4) {
+
+                document.getElementById("prikaz").innerHTML += `<p>Има ${rightNumbersCounter}, на место ${rightPlaceNumbersCounter} ${inputNumber}</p>`;
+
+                if(obidi === 9) {
+                    alert(`Не успеавте да погодите бараниот број е: ${randomNumber}`);
+                    obidi++;
+                    document.getElementById('guessNumber').innerHTML = obidi;
+                    document.getElementById('pogodokButton').disabled = true;
+                    return;
+                }
+                obidi++;
+                document.getElementById('guessNumber').innerHTML = obidi;
+                document.getElementById('guess').value = "";
+
+            } 
+            else {
+                document.getElementById('pogodokButton').disabled = true;
+                alert("ПОГОДОК!");
+            }
+        }
+
+
+        function reset() {
+            generateNumber();
+            document.getElementById('prikaz').innerHTML = " ";
+            document.getElementById('guess').value = "";
+            document.getElementById('pogodokButton').disabled = false;
+            document.getElementById("guessNumber").innerHTML = "0";
+        }
+    </script>
+  </body>
+</html>
