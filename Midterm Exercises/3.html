@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+  <body>
+    <input id="text" />
+    <input id="color" />
+
+    <input type="radio" name="radiobtn" value="start" />Start
+    <input type="radio" name="radiobtn" value="end" />End
+
+    <button onclick="add()">Add</button>
+    <button onclick="remove()">Delete</button>
+
+    <div id="container"></div>
+  </body>
+  <script>
+    let data = [];
+
+    function add() {
+      let text = document.getElementById("text").value;
+      let options = document.querySelectorAll(`input[name="radiobtn"]`);
+      document.getElementById("container").innerHTML = "";
+      let colorValue = document.getElementById("color").value;
+      let selectedOption = getSelectedOption(options);
+      let newData = {
+        value: text,
+        color: colorValue,
+      };
+      changeData("add", selectedOption.value, newData);
+      updateData();
+    }
+
+    function remove() {
+      let options = document.querySelectorAll(`input[name="radiobtn"]`);
+      document.getElementById("container").innerHTML = "";
+      let selectedOption = getSelectedOption(options);
+      changeData("remove", selectedOption.value);
+      updateData();
+    }
+
+    function getSelectedOption(options) {
+      let selectedOption;
+      for (let item of options) {
+        if (item.checked) {
+          selectedOption = item;
+        }
+      }
+      return selectedOption;
+    }
+
+    function changeData(todo, option, newData) {
+      if (option == "start" && todo == "add") {
+        data.unshift(newData);
+      } else if (option == "end" && todo == "add") {
+        data.push(newData);
+      } else if (option == "start" && todo == "remove") {
+        data.shift();
+      } else if (option == "end" && todo == "remove") {
+        data.pop();
+      }
+    }
+
+    function updateData() {
+      for (let item of data) {
+        let p = document.createElement("p");
+        p.style.color = item.color;
+        p.innerHTML = item.value;
+        document.getElementById("container").appendChild(p);
+      }
+    }
+  </script>
+</html>
