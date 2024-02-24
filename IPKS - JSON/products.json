@@ -1,0 +1,52 @@
+[
+    {
+        "id": 1,
+        "name": "Espresso",
+        "price": 80
+    },
+    {
+        "id": 2,
+        "name": "Macchiato",
+        "price": 100
+    },
+    {
+        "id": 3,
+        "name": "Capuccino",
+        "price": 100
+    },
+    {
+        "id": 4,
+        "name": "Latte",
+        "price": 120
+    },
+    {
+        "id": 5,
+        "name": "Irish",
+        "price": 160
+    },
+    {
+        "id": 6,
+        "name": "Frappe",
+        "price": 120
+    },
+    {
+        "id": 7,
+        "name": "Espresso Tonic",
+        "price": 120
+    },
+    {
+        "id": 8,
+        "name": "Hot Chocolate",
+        "price": 160
+    },
+    {
+        "id": 9,
+        "name": "Lemonade",
+        "price": 130
+    },
+    {
+        "id": 10,
+        "name": "Grapefruit",
+        "price": 160
+    }
+]
