@@ -3,96 +3,96 @@
         "id": 1,
         "account": "2109991111234567",
         "owner": "Alice Smith",
-        "balance": 0,
         "expires": "03/08/2025",
+        "balance": 71823,
         "CVV": "123"
     },
     {
         "id": 2,
         "account": "3056789023451234",
         "owner": "John Doe",
-        "balance": 0,
         "expires": "15/11/2024",
+        "balance": 37895,
         "CVV": "789"
     },
     {
         "id": 3,
         "account": "4102938745678901",
         "owner": "Emily Johnson",
-        "balance": 0,
         "expires": "29/05/2027",
+        "balance": 52714,
         "CVV": "567"
     },
     {
         "id": 4,
         "account": "5928347610234789",
         "owner": "Michael Brown",
-        "balance": 0,
         "expires": "12/09/2026",
+        "balance": 87123,
         "CVV": "234"
     },
     {
         "id": 5,
         "account": "6889876512345678",
         "owner": "Emma Wilson",
-        "balance": 0,
         "expires": "08/04/2025",
+        "balance": 65029,
         "CVV": "890"
     },
     {
         "id": 6,
         "account": "7789640321896745",
         "owner": "Daniel Garcia",
-        "balance": 0,
         "expires": "21/06/2026",
+        "balance": 44897,
         "CVV": "345"
     },
     {
         "id": 7,
         "account": "8192347654382076",
         "owner": "Sophia Lee",
-        "balance": 0,
         "expires": "17/12/2024",
+        "balance": 77755,
         "CVV": "678"
     },
     {
         "id": 8,
         "account": "9056741238790564",
         "owner": "James Anderson",
-        "balance": 0,
         "expires": "05/02/2027",
+        "balance": 32648,
         "CVV": "901"
     },
     {
         "id": 9,
         "account": "6123456789012345",
         "owner": "Olivia Martinez",
-        "balance": 0,
         "expires": "23/10/2025",
+        "balance": 92473,
         "CVV": "456"
     },
     {
         "id": 10,
         "account": "7123456789012345",
         "owner": "William Taylor",
-        "balance": 0,
         "expires": "30/07/2026",
+        "balance": 50562,
         "CVV": "789"
     },
     {
         "id": 11,
         "account": "8901234567123456",
         "owner": "Isabella Rodriguez",
-        "balance": 0,
         "expires": "14/03/2027",
+        "balance": 78094,
         "CVV": "234"
     },
     {
         "id": 12,
         "account": "9467458901234567",
         "owner": "Liam Wilson",
-        "balance": 0,
         "expires": "19/08/2025",
+        "balance": 61937,
         "CVV": "567"
     }
 ]
