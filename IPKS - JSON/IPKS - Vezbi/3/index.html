@@ -112,23 +112,23 @@
         }
 
         function addOrder() {
-            let tableID = document.querySelector("#table_option").value - 1;
-            let productID = document.querySelector("#product_option").value - 1;
+            let tableID = document.querySelector("#table_option").value;
+            let productID = document.querySelector("#product_option").value;
             let quantityValue = document.querySelector("#quantityInput").value;
             let tablesData = JSON.parse(localStorage.getItem("tables"));
             let productsData = JSON.parse(localStorage.getItem("products"));
-            let newData = productsData[productID];
+            let newData = productsData[productID - 1];
             newData.quantity = parseInt(quantityValue);
-            let orderExist = tablesData[tableID].order.find((order) => order.id == productID);
+            let orderExist = tablesData[tableID - 1].order.find((order) => order.id == productID);
             if(orderExist === undefined) {
-                tablesData[tableID].order.push(newData);
+                tablesData[tableID - 1].order.push(newData);
             }
             else {
                 orderExist.quantity = parseInt(orderExist.quantity) + parseInt(quantityValue);
             }
             let totalPrice = 0;
-            tablesData[tableID].order.map((order) => totalPrice = totalPrice + (order.price * order.quantity));
-            tablesData[tableID].price = totalPrice;
+            tablesData[tableID - 1].order.map((order) => totalPrice = totalPrice + (order.price * order.quantity));
+            tablesData[tableID - 1].price = totalPrice;
             localStorage.setItem("tables", JSON.stringify(tablesData));
             fillTables(tablesData);
         }
@@ -148,7 +148,8 @@
                     <td>
                         Quantity: ${product.quantity}
                         </td>
-                    </tr>`   
+                    </tr>
+                `   
             ))
             tableOrderContainer.innerHTML += `<button onclick="payOrder(${tableID - 1})">Pay order</button>`
         }
@@ -166,7 +167,6 @@
         }
 
         getData();
-        
     </script>
 </body>
 </html>
