@@ -1,0 +1,177 @@
+[
+    {
+        "id": 1,
+        "artist": "Faithless",
+        "albums": [
+            {
+                "name": "Reverence",
+                "thumbnail": "https://upload.wikimedia.org/wikipedia/en/6/66/Faithless_Reverence.jpg",
+                "year": 1996,
+                "songs": [
+                    {
+                        "name": "Reverence"
+                    },
+                    {
+                        "name": "Don't Leave"
+                    },
+                    {
+                        "name": "Salva Mea"
+                    },
+                    {
+                        "name": "Insomnia"
+                    },
+                    {
+                        "name": "Angeline"
+                    },
+                    {
+                        "name": "If Lovin' You Is Wrong"
+                    },
+                    {
+                        "name": "Dirty Ol' Man"
+                    },
+                    {
+                        "name": "Flowerstand Man"
+                    },
+                    {
+                        "name": "Baseball Cap"
+                    },
+                    {
+                        "name": "Drifting Away"
+                    }
+                ]
+            },
+            {
+                "name": "Sunday 8PM",
+                "thumbnail": "https://upload.wikimedia.org/wikipedia/en/1/16/Faithless_Sunday_8PM.jpg",
+                "year": "1998",
+                "songs": [
+                    {
+                        "name": "The Garden"
+                    },
+                    {
+                        "name": "Bring My Family Back"
+                    },
+                    {
+                        "name": "God Is a DJ"
+                    },
+                    {
+                        "name": "Take the Long Way Home"
+                    },
+                    {
+                        "name": "Why Go?"
+                    },
+                    {
+                        "name": "She's My Baby"
+                    },
+                    {
+                        "name": "Bring My Family Back"
+                    },
+                    {
+                        "name": "Hour of Need"
+                    },
+                    {
+                        "name": "Postcards"
+                    },
+                    {
+                        "name": "Sunday 8PM"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "artist": "Linkin Park",
+        "albums": [
+            {
+                "name": "Hybrid Theory",
+                "thumbnail": "https://upload.wikimedia.org/wikipedia/en/2/2a/Linkin_Park_Hybrid_Theory_Album_Cover.jpg",
+                "year": "2000",
+                "songs": [
+                    {
+                        "name": "Papercut"
+                    },
+                    {
+                        "name": "One Step Closer"
+                    },
+                    {
+                        "name": "With You"
+                    },
+                    {
+                        "name": "Points of Authority"
+                    },
+                    {
+                        "name": "Crawling"
+                    },
+                    {
+                        "name": "Runaway"
+                    },
+                    {
+                        "name": "By Myself"
+                    },
+                    {
+                        "name": "In the End"
+                    },
+                    {
+                        "name": "A Place for My Head"
+                    },
+                    {
+                        "name": "Forgotten"
+                    },
+                    {
+                        "name": "Cure for the Itch"
+                    },
+                    {
+                        "name": "Pushing Me Away"
+                    }
+                ]
+            },
+            {
+                "name": "Meteora",
+                "year": "2003",
+                "thumbnail": "https://upload.wikimedia.org/wikipedia/en/0/0c/Linkin_Park_Meteora_Album_Cover.jpg",
+                "songs": [
+                    {
+                        "name": "Foreword"
+                    },
+                    {
+                        "name": "Don't Stay"
+                    },
+                    {
+                        "name": "Somewhere I Belong"
+                    },
+                    {
+                        "name": "Lying from You"
+                    },
+                    {
+                        "name": "Hit the Floor"
+                    },
+                    {
+                        "name": "Easier to Run"
+                    },
+                    {
+                        "name": "Faint"
+                    },
+                    {
+                        "name": "Figure.09"
+                    },
+                    {
+                        "name": "Breaking the Habit"
+                    },
+                    {
+                        "name": "From the Inside"
+                    },
+                    {
+                        "name": "Nobody's Listening"
+                    },
+                    {
+                        "name": "Session"
+                    },
+                    {
+                        "name": "Numb"
+                    }
+                ]
+            }
+        ]
+    }
+]
