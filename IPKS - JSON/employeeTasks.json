@@ -4,6 +4,8 @@
         "name": "John",
         "surname": "Peterson",
         "role": "Manager",
+        "username": "john_22",
+        "password": "peterson22",
         "task": []
     },
     {
@@ -11,6 +13,8 @@
         "name": "John",
         "surname": "Peterson",
         "role": "Developer",
+        "username": "john_23",
+        "password": "peterson23",
         "task": []
     },
     {
@@ -18,6 +22,8 @@
         "name": "John",
         "surname": "Peterson",
         "role": "QA Tester",
+        "username": "john_24",
+        "password": "peterson24",
         "task": []
     },
     {
@@ -25,6 +31,8 @@
         "name": "John",
         "surname": "Peterson",
         "role": "Developer",
+        "username": "john_25",
+        "password": "peterson25",
         "task": []
     },
     {
@@ -32,6 +40,8 @@
         "name": "John",
         "surname": "Peterson",
         "role": "Data Engineer",
+        "username": "john_25",
+        "password": "peterson25",
         "task": []
     }
 ]
