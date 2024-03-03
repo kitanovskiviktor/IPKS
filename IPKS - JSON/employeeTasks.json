@@ -1,47 +1,65 @@
 [
     {
         "id": 1,
-        "name": "John",
-        "surname": "Peterson",
+        "name": "Emily",
+        "surname": "Johnson",
         "role": "Manager",
-        "username": "john_22",
-        "password": "peterson22",
+        "username": "emily10",
+        "password": "10emily10",
         "task": []
     },
     {
         "id": 2,
-        "name": "John",
-        "surname": "Peterson",
+        "name": "Chloe",
+        "surname": "Williams",
         "role": "Developer",
-        "username": "john_23",
-        "password": "peterson23",
+        "username": "williams20",
+        "password": "20williams20",
         "task": []
     },
     {
         "id": 3,
-        "name": "John",
-        "surname": "Peterson",
+        "name": "Xavier",
+        "surname": "Chang",
         "role": "QA Tester",
-        "username": "john_24",
-        "password": "peterson24",
+        "username": "xavier30",
+        "password": "30xavier30",
         "task": []
     },
     {
         "id": 4,
-        "name": "John",
-        "surname": "Peterson",
-        "role": "Developer",
-        "username": "john_25",
-        "password": "peterson25",
+        "name": "Sophia",
+        "surname": "Nguyen",
+        "role": "Full Stack Developer",
+        "username": "sophia40",
+        "password": "40sophia40",
         "task": []
     },
     {
         "id": 5,
-        "name": "John",
-        "surname": "Peterson",
+        "name": "Ethan",
+        "surname": "Sullivan",
         "role": "Data Engineer",
-        "username": "john_25",
-        "password": "peterson25",
+        "username": "ethan50",
+        "password": "50ethan50",
+        "task": []
+    },
+    {
+        "id": 6,
+        "name": "Noah",
+        "surname": "Smith",
+        "role": "UX/UI Designer",
+        "username": "noah60",
+        "password": "60noah60",
+        "task": []
+    },
+    {
+        "id": 7,
+        "name": "Jacob",
+        "surname": "Gabriel",
+        "role": "Sales Representative",
+        "username": "jacob70",
+        "password": "70jacob70",
         "task": []
     }
 ]
