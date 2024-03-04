@@ -1,0 +1,148 @@
+[
+    {
+        "id": 1,
+        "airport": "Skopje International Airport",
+        "code": "SKP",
+        "tag": "Skopje",
+        "country": "Macedonia",
+        "flights": [
+            {
+                "id": 1,
+                "route": "SKP-IST",
+                "tag": "Istanbul", 
+                "price": "90",
+                "duration": "1h"
+            },
+            {
+                "id": 2,
+                "route": "SKP-SJJ",
+                "tag": "Sarajevo", 
+                "price": "70",
+                "duration": "40min"
+            },
+            {
+                "id": 3,
+                "route": "SKP-FRA",
+                "tag": "Frankfurt", 
+                "price": "120",
+                "duration": "2h"
+            },
+            {
+                "id": 4,
+                "route": "SKP-MXP",
+                "tag": "Milano", 
+                "price": "110",
+                "duration": "1h 40min"
+            },
+            {
+                "id": 5,
+                "route": "SKP-MMX",
+                "tag": "Malmo", 
+                "price": "160",
+                "duration": "2h 30min"
+            },
+            {
+                "id": 6,
+                "route": "SKP-VIE",
+                "tag": "Vienna", 
+                "price": "80",
+                "duration": "1h 50min"
+            },
+            {
+                "id": 7,
+                "route": "SKP-BTS",
+                "tag": "Bratislava", 
+                "price": "60",
+                "duration": "1h 30min"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "airport": "Istanbul Airport",
+        "code": "IST",
+        "country": "Turkey",
+        "tag": "Istanbul",
+        "flights": [
+            {
+                "id": 1,
+                "route": "IST-SKP",
+                "tag": "Skopje", 
+                "price": "90",
+                "duration": "1h"
+            },
+            {
+                "id": 2,
+                "route": "IST-VIE",
+                "tag": "Vienna", 
+                "price": "120",
+                "duration": "2h 40min"
+            },
+            {
+                "id": 3,
+                "route": "IST-DUS",
+                "tag": "Dusseldorf", 
+                "price": "140",
+                "duration": "3h"
+            },
+            {
+                "id": 4,
+                "route": "IST-CAI",
+                "tag": "Cairo", 
+                "price": "180",
+                "duration": "4h"
+            },
+            {
+                "id": 5,
+                "route": "IST-HAM",
+                "tag": "Hamburg", 
+                "price": "130",
+                "duration": "3h 20min"
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "airport": "Moscow Sheremetyevo International Airport",
+        "code": "SVO",
+        "country": "Russia",
+        "tag": "Moscow",
+        "flights": [
+            {
+                "id": 1,
+                "route": "SVO-SKP",
+                "tag": "Skopje", 
+                "price": "200",
+                "duration": "6h"
+            },
+            {
+                "id": 2,
+                "route": "SVO-AYT",
+                "tag": "Antalya", 
+                "price": "240",
+                "duration": "6h 20min"
+            },
+            {
+                "id": 3,
+                "route": "SVO-DXB",
+                "tag": "Dubai", 
+                "price": "600",
+                "duration": "8h"
+            },
+            {
+                "id": 4,
+                "route": "SVO-BEG",
+                "tag": "Belgrade", 
+                "price": "180",
+                "duration": "5h 30min"
+            },
+            {
+                "id": 5,
+                "route": "SVO-VIE",
+                "tag": "Vienna", 
+                "price": "160",
+                "duration": "5h 10min"
+            }
+        ]
+    }
+]
